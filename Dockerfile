@@ -4,4 +4,6 @@ WORKDIR /app
 # COPY requirements.txt requirements.txt
 RUN pip3 install flask
 COPY . .
-CMD [ "python", "run.py"]
+ENV FLASK_APP /app/run.py
+CMD flask run
+# CMD [ "python", "run.py"]
